@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="Lecture for Web Dev 3">
+		<meta name="author" content="Dakota Ling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 1</h1>
+					<p>Welcome to the wonderful world of Git!</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Hidden files</h2>
+						<p>How to see what's going on behind the scenes</p>
+					</section>
+					<section>
+						<h2>Mac</h2>
+						<p>In macOS 10.12 (Sierra) and up, use the following key combo in Finder:</p>
+						<pre>
+CMD + SHIFT + .
+						</pre>
+					</section>
+					<section>
+						<h2>Windows</h2>
+						<p>In File Explorer, click the View tab and click the "Hidden Items" checkbox.</p>
+					</section>
+					
+				</section>
+
+				<section>
+					<section>
+						<h2>The System</h2>
+						<p>Git is a version control system.</p>
+					</section>
+					<section>
+						<p>Maintains history of a project, so no work gets lost.</p>
+					</section>
+					<section>
+						<p>Can be used without a website or app.</p>
+					</section>
+					<section>
+						<h1>Use. Git. For. Every. Project.</h1>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Starting a Git repository without Github:</p>
+						<ol>
+							<li><pre>cd</pre> and drag your project folder into terminal.</li>
+							<li><pre>git init</pre></li>
+						</ol>
+						<p>That's it, you now have a (local) git repository</p>
+					</section>
+					<section>
+						<p>You can use Terminal commands from here, With commands like: <pre>git status</pre><pre>git add -A</pre><pre>git commit -m "Initial Commit!"</pre></p>
+					</section>
+					<section>
+						<p>Terminal command structure</p>
+						<pre><code>
+
+command  option  option  argument
+git      commit  -m      "initial commit"
+						</code></pre>
+					</section>
+					<section>
+						<p>You can also just drag into Github Desktop</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Important Folders</h2>
+						<p>.git and .gitignore</p>
+					</section>
+					<section>
+						<h2>.git folder</h2>
+						<p>This is your git repository.</p>
+						<p>Includes config files and your project history.</p>
+					</section>
+					<section>
+						<h2>.gitignore</h2>
+						<p>Prevents certain files and folders (like node-modules) from being added to the repo.</p>
+						<p>Right click on files in Github Desktop and click 'ignore'.</p>
+						<p>Can edit this directly.</p>
+					</section>
+					<section>
+						<h1>Never commit node_modules</h1>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Clients</h2>
+						<p>Apps to visualize all those commands.</p>
+						<p>What I mean when I say 'the app' or 'Github Desktop'</p>
+					</section>
+					<section>
+						<h2>Our Client</h2>
+						<p>Github Desktop: <a href="https://desktop.github.com/">desktop.github.com</a></p>
+						<p>Different clients offer different visualizations and more in-depth commands.</p>
+					</section>
+					<section>
+						<h2>Other Clients</h2>
+						<ul>
+							<li><a href="https://www.sourcetreeapp.com/">SourceTree</a> - Works with Bitbucket, good merge tools.</li>
+							<li><a href="https://code.visualstudio.com/docs/editor/versioncontrol">VS Code</a></li>
+						</ul>
+					</section>
+					<section>
+						<p>Use what you're comfortable with.</p>
+						<p>I use SourceTree for 95% of my git use, and the command line for any really weird stuff.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Hosts</h2>
+						<p>Places to store all those things</p>
+					</section>
+					<section>
+						<h2>Our Host</h2>
+						<p>Github: <a href="https://github.com/">github.com</a></p>
+						<p>Different hosts offer different features around managing your repositories.</p>
+					</section>
+					<section>
+						<h2>Other Hosts</h2>
+						<ul>
+							<li><a href="https://bitbucket.org/">Bitbucket</a> - Works with things like Jira and Trello</li>
+							<li>Some <a href="https://www.git-tower.com/blog/git-hosting-services-compared/">other ones</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Starting a repository</h2>
+						<p>And connecting it to github.com</p>
+						<p>Reference these slides as you need to.</p>
+					</section>
+					<section>
+						<h2>General Steps</h2>
+						<ol>
+							<li>Drag folder to Github Desktop</li>
+							<li>Publish</li>
+						</ol>
+					</section>
+					<section>
+						<p>More specific</p>
+						<ul>
+							<li>No Project, No Repo</li>
+							<li>Project but no Repo</li>
+							<li>Project and Repo, not connected</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>No Repo, No Project</h2>
+						<p>Or how to start completely fresh.</p>
+					</section>
+					<section>
+						<ol>
+							<li>Create a folder in Finder</li>
+							<li>Drag folder onto Github Desktop</li>
+							<li>Click "create repository"</li>
+							<li>Add files, Publish</li>
+						</ol>
+						<p>That's it. Start adding project files.</p>
+					</section>
+					<section>
+						<p>Alternately...</p>
+						<ol>
+							<li>Go to Github.com</li>
+							<li>Create a new repository</li>
+							<li>Hit 'Clone in Desktop'</li>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Project, No Repo</h2>
+						<p>Or how to create a git repository from an existing project</p>
+					</section>
+					<section>
+						<ol>
+							<li>Drag project folder into Github Desktop</li>
+							<li>Hit 'Publish'</li>
+						</ol>
+						<p>This will create a repository on github.com</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Project and Repo</h2>
+						<p>Or how to add an existing project to an existing repo.</p>
+						<p>(Usually you will not want to do this)</p>
+					</section>
+					<section>
+						<ol>
+							<li>Clone repository into new folder</li>
+							<li>Drag files from existing project (not .git)</li>
+							<li>Commit</li>
+						</ol>
+						<p>Essentially copying your project into a repository folder.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>The Basics</h2>
+						<p>Cloning, committing, pushing, pulling.</p>
+					</section>
+					<section>
+						<h2>Cloning</h2>
+						<p>Download a LOCAL copy of a git repository from a REMOTE server, including all history.</p>
+						<pre>
+cd path/to/your/project
+
+git clone https://github.com/CyanLetter/WebDev3_Spring2018
+						</pre>
+					</section>
+					<section>
+						<h2>Committing</h2>
+						<p>Save a particular set of changes in your local copy.</p>
+						<ul>
+							<li>Does not affect the remote yet.</li>
+							<li>Commit early, commit often.</li>
+							<li>Commit before the end of the day.</li>
+							<li>There is no such thing as too many commits.</li>
+						</ul>
+						<pre>
+git add [files to add]
+
+git commit -m "Your message"
+						</pre>
+					</section>
+					<section>
+						<h2>Pushing, pulling</h2>
+						<ul>
+							<li>PULL or FETCH any new commits that the remote server has down to your local copy</li>
+							<li>PUSH the local commits you made back to the remote server</li>
+							<li>Always pull before pushing your own commits!</li>
+						</ul>
+					</section>
+					<section>
+						<p><a href="https://help.github.com/articles/pushing-to-a-remote/">About pushing</a></p>
+						<pre>
+git pull
+
+git push origin master
+						</pre>
+					</section>
+					<section>
+						<h2>Keeping up-to-date</h2>
+						<p>When you sync, you can see how many commits your local copy is behind or ahead of the remote.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Reverting</h2>
+						<p>Restoring files to a previous version</p>
+						<p>There are about a million ways to do this.</p>
+						<p>Most of them are confusing or dangerous.</p>
+					</section>
+					<section>
+						<h2>Uncommitted changes</h2>
+						<p>In the app, right click on a file and select Discard Changes, or Discard All</p>
+					</section>
+					<section>
+						Opening a specific file
+						<ul>
+							<li>Select a commit</li>
+							<li>Right click on a file and select "open"</li>
+							<li>Copy and paste as necessary</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Going back to previous commits</h2>
+						<p>Lots of dangerous ways to do this that rewrite history.</p>
+						<p>The command line is simplest</p>
+					</section>
+					<section>
+						<h2>The Undo button</h2>
+						<p>DANGER</p>
+						<p>REWRITES HISTORY</p>
+						<p>DANGER</p>
+					</section>
+					<section>
+						<p>In the history tab, right click the commit you want to undo and select 'Copy SHA'</p>
+						<p>In Terminal:</p>
+						<pre>
+git revert --no-commit 0766c053..HEAD
+						</pre>
+						<p>Make sure to include the '..HEAD' after your SHA</p>
+						<p>The app will create a new commit for you.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Branching</h2>
+						<p>Making an alternate timeline</p>
+						<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows">Different workflows</a></p>
+					</section>
+					<section>
+						<p>The master branch should never be broken.</p>
+						<p>Branches let you work without breaking master.</p>
+						<p>Great for working in teams, still helpful if it's just you.</p>
+					</section>
+					<section>
+						<h2>Stay in sync with master</h2>
+						<p>Always branch from master.</p>
+						<p>Always update from master (in app).</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Merging</h2>
+						<p>Connecting the timelines.</p>
+					</section>
+					<section>
+						<p>When you're finished with a branch...</p>
+						<ul>
+							<li>Switch to the branch you want to merge into (e.g. master)</li>
+							<li>Go to Branch > Merge Into Current Branch</li>
+							<li>Pick the branch you want to merge</li>
+							<li>Resolve conflicts, commit</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Conflicts</h2>
+						<p>Two people changed the same thing! How do you fix it?</p>
+						<p><a href="https://help.github.com/articles/resolving-a-merge-conflict-on-github/">About merge conflicts</a></p>
+					</section>
+					<section>
+						<h2>Resolving by hand</h2>
+						<p>Things on top are yours, things on bottom are theirs.</p>
+						<p>Delete what you don't want to keep.</p>
+						<pre>
+<<<<<<< HEAD
+Stuff from your laptop (LOCAL)
+=======
+Stuff from the server (REMOTE)
+>>>>>>> origin/master
+						</pre>
+					</section>
+					<section>
+						<h2>Merge Tools</h2>
+						<p>Built-in</p>
+						<ul>
+							<li>Sourcetree</li>
+							<li>VS Code</li>
+						</ul>
+
+						<p>Dedicated</p>
+						<ul>
+							<li>Meld</li>
+							<li>kDiff</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Forking</h2>
+						<p>Duplicating someone else's repo for yourself to edit.</p>
+					</section>
+					<section>
+						<h2>The fork button</h2>
+						<p>On github. Creates a copy of the project that you own.</p>
+						<p>You can pull updates from the original project.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Pull requests</h2>
+						<p>A request to merge your changes back into the original repo.</p>
+						<p>Best to do this from a branch.</p>
+						<p>This is how people fix bugs and add features in open source projects.</p>
+					</section>
+					<section>
+						<p>Setting up a merge so that it can be reviewed.</p>
+						<p>Always make a request to merge your current branch into the target branch.</p>
+						<p><a href="https://help.github.com/articles/creating-a-pull-request/#changing-the-branch-range-and-destination-repository">About pull requests</a></p>
+					</section>
+					<section>
+						<h2>From Desktop</h2>
+						<ul>
+							<li>Make sure you're in the right branch</li>
+							<li>Hit the Pull Request button</li>
+							<li>Add a description, send it.</li>
+							<li>Owner can review and accept on github.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>From the Web</h2>
+						<ul>
+							<li>Make sure you're in the right branch</li>
+							<li>Hit the New Pull Request button</li>
+							<li>Add description, this sould all be familiar</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Let's talk homework</h2>
+					<p>
+						Also, next class we are learning Sass. Get hyped!
+					</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
