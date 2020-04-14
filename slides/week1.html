@@ -235,6 +235,14 @@ git      commit  -m      "initial commit"
 						</ol>
 						<p>Essentially copying your project into a repository folder.</p>
 					</section>
+					<section>
+						<p>Alternately:</p>
+						<pre>
+cd path/to/your/project
+
+git remote add origin https://your-repository-url
+						</pre>
+					</section>
 				</section>
 
 				<section>
@@ -326,6 +334,23 @@ git revert --no-commit 0766c053..HEAD
 						</pre>
 						<p>Make sure to include the '..HEAD' after your SHA</p>
 						<p>The app will create a new commit for you.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Stashing</h2>
+						<p>Save uncommitted changes for later.</p>
+						<p>Available in SourceTree or on the command line.</p>
+					</section>
+					<section>
+						<pre>
+git stash save "Name of Stash"
+
+git stash list
+
+git stash apply [index]
+						</pre>
 					</section>
 				</section>
 
@@ -441,9 +466,9 @@ Stuff from the server (REMOTE)
 				</section>
 
 				<section>
-					<h2>Let's talk homework</h2>
+					<h2>That's it!</h2>
 					<p>
-						Also, next class we are learning Sass. Get hyped!
+						Git is confusing, so ask plenty of questions.
 					</p>
 				</section>
 			</div>
