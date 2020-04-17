@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="Lecture for Web Dev 3">
+		<meta name="author" content="Dakota Ling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 2</h1>
+					<h3>Sass</h3>
+				</section>
+
+				<section>
+					<h2>What is Sass</h2>
+					<p>Syntactically Awesome Stylesheets</p>
+					<p>Sass is a preprocessor</p>
+				</section>
+
+				<!-- Preprocessors -->
+				<section>
+					<section>
+						<h2>Preprocessing</h2>
+						<p>Taking one file and spitting out another</p>
+						<p>In our case, taking .scss files and turning them into .css</p>
+					</section>
+
+					<section>
+						<h2>Another language?</h2>
+						<p>CSS is valid Sass.</p>
+					</section>
+
+					<section>
+						<h2>But how?</h2>
+						<p>Command line tools, like gulp or grunt</p>
+						<p>Apps like Prepros or Codekit</p>
+					</section>
+
+					<section>
+						<h2>Why Sass?</h2>
+						<ul>
+							<li>Helps organize styles in large projects.</li>
+							<li>Gives new, exciting features to vanilla css.</li>
+						</ul>
+						
+					</section>
+				</section>
+
+				<section>
+					<h2>.sass vs .scss</h2>
+					<p>Confusingly, there is an older file type, .sass</p>
+					<p><a href="https://stackoverflow.com/a/27209555">It's weird</a></p>
+					<p>We are just using .scss</p>
+				</section>
+
+				<!-- Intro to Gulp and using sass -->
+				<section>
+					<section>
+						<h2>The Basics</h2>
+						<p>Using prepros to turn scss into css.</p>
+					</section>
+
+					<section>
+						<h2>Projects</h2>
+						<ul>
+							<li>prepros watches for changes in src</li>
+							<li>processes changed files</li>
+							<li>src goes to dist</li>
+						</ul>
+						<p><strong>CSS files will always get overwritten.</strong></p>
+					</section>
+				</section>
+
+				<!-- Variables -->
+				<section>
+					<section>
+						<h2>Variables</h2>
+						<p>Assign a value to a particular word.</p>
+						<p>Change styles in one place.</p>
+					</section>
+					<section>
+						<h2>$</h2>
+						<p>The dollar sign means 'this is a variable'</p>
+						<pre><code class="scss">
+$primary-color: #aa0045;
+
+.main-container {
+  background: $primary-color;
+}
+						</code></pre>
+					</section>
+					<section>
+						<p>Math!</p>
+						<pre><code class="scss">
+$one-third: 1 / 3 * 100%;
+
+.sidebar {
+	width: $one-third;
+}
+						</code></pre>
+						<p>Sass can handle basic math and some special functions.</p>
+					</section>					
+					<section>
+						<p>More examples</p>
+						<pre><code class="scss">
+$body-size: 1rem;
+$disclaimer-size: 0.4rem;
+
+p {
+	font-size: $body-size;
+}
+
+footer {
+	font-size: $disclaimer-size;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Guidelines</h2>
+						<ul>
+							<li>Make variables reusable</li>
+							<li>Work with design systems if possible</li>
+							<li>Keep variables together</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Nesting -->
+				<section>
+					<section>
+						<h2>Nesting</h2>
+						<p>Putting selectors inside of selectors.</p>
+						<p>Helps organize code into modules and sections.</p>
+					</section>
+
+					<section>
+						<pre><code class="scss">
+/* this */
+.parent {
+
+  .child {
+    background: red;
+  }
+}
+
+/* is the same as this */
+.parent .child {
+  background: red;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Complex Nesting</h2>
+						<p>&amp; means 'and also'</p>
+						<p>&gt; means 'direct child'</p>
+					</section>
+
+					<section>
+						<pre><code class="scss">
+/* Applies to parent that also has red class */
+.parent {
+	
+  &.red {
+    background: red;
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<pre><code class="scss">
+/* Can use with pseudoclasses */
+.someclass {
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+  }	
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Guidelines</h2>
+						<ul>
+							<li>Don't over specify</li>
+							<li>Apply general rules first</li>
+							<li><a href="https://twitter.com/Una/status/669516588907954176">Check your output</a></li>
+						</ul>
+					</section>
+
+				</section>
+
+				<!-- @media -->
+				<section>
+					<section>
+						<h2>@media</h2>
+						<p>Can be nested inline</p>
+					</section>
+
+					<section>
+						<p>Basic Example</p>
+						<pre><code class="scss">
+.container {
+  width: 60%;
+  @media (min-width: 200px) and (max-width:600px) {
+    width: 100%;
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Combine with variables to make responsive modules.</p>
+						<p>Note that these are mobile-first breakpoints.</p>
+						<pre><code class="scss">
+$tablet-breakpoint: 640px;
+$desktop-breakpoint: 960px;
+
+.content {
+  width: 100%;
+
+  @media (min-width: $tablet-breakpoint) {
+    width: 50%;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    width: 30%;
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Guidelines</h2>
+						<p>Some people like this style, some hate it.</p>
+						<ul>
+							<li>Pro: All styles for a selector are in one place.</li>
+							<li>Con: Media queries are no longer in one central place.</li>
+							<li>Best used when building components.</li>
+							<li>Use sparingly.</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Directives -->
+				<section>
+					<section>
+						<h2>Other Directives</h2>
+						<p>Prefixed with an @ symbol</p>
+					</section>
+					<section>
+						<h2>How they work</h2>
+						<p>Directives tell Sass to do something special when processing.</p>
+						<p>Very similar to @ directives in vanilla css.</p>
+					</section>
+					<section>
+						<h2>Basic Directives</h2>
+						<ul>
+							<li>@import</li>
+							<li>@extend</li>
+							<li>@mixin</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- @import -->
+				<section>
+					<section>
+						<h2>@import</h2>
+						<p>Merge partial files into your main one.</p>
+						<p>Can act like a css import statement</p>
+					</section>
+					<section>
+						<h2>Defining a partial</h2>
+						<p>Sass sees a leading underscore as a partial file, e.g.</p>
+						<ul>
+							<li>main.scss is a regular file</li>
+							<li>_part.scss is a partial</li>
+						</ul>
+						<p>Underscores mean it will not be processed by itself.</p>
+					</section>
+
+					<section>
+						<p>If you have two files, main.scss and _part.scss, you can merge them.</p>
+
+						<pre><code class="scss">
+/* inside of main.scss */
+.main-styles {
+	/* Style rules here */
+}
+
+/* Partial will be added here */
+@import "part";
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Guidelines</h2>
+						<ul>
+							<li>Be careful where you import, styles still cascade!</li>
+							<li>Use this for organization.</li>
+							<li>You could separate variables or modules.</li>
+							<li>You can separate different parts of your site.</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- @extend -->
+				<section>
+					<section>
+						<h2>@extend</h2>
+						<p>Duplicate styles you've already written.</p>
+						<p>Some people <a href="https://www.sitepoint.com/avoid-sass-extend/">don't like them</a></p>
+					</section>
+
+					<section>
+						<p>Make extendable modules</p>
+						<pre><code class="scss">
+.module {
+	height: 120px;
+	background: #333;
+	color: white;
+}
+
+.module-centered {
+	@extend .widget;
+
+	text-align: center;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Guidelines</h2>
+						<ul>
+							<li>Start with simple components.</li>
+							<li>Be wary of changes after using.</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- @mixin -->
+				<section>
+					<section>
+						<h2>@mixin, @include</h2>
+						<p>Code you define once, reuse anywhere.</p>
+						<p>Duplicates style rules.</p>
+						<p>Can execute complex instructions.</p>
+					</section>
+
+					<section>
+						<h2>Usage</h2>
+						<p>Take the content of the mixin, replaces the variables with the given arguments and prints it at the very position the mixin has been included.</p>
+					</section>
+
+					<section>
+						<h2>Define</h2>
+						<p>Define code with @mixin</p>
+						<pre><code class="scss">
+@mixin bounds {
+  border: 1px solid red;
+  background: rgba(255, 0, 0, 0.2);
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Include</h2>
+						<p>Place code with @include</p>
+						<pre><code class="scss">
+.some-broken-element {
+  @include bounds;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Pass In Variables</p>
+
+						<pre><code class="scss">
+@mixin multi-column($col-count) {
+  column-count: $col-count;
+  column-gap: 35px;
+  column-rule-color: seagreen;
+  column-rule-style: dotted;
+  column-rule-width: 5px;
+}
+
+.three-column {
+	@include multi-column(3);
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Breakpoints</h2>
+						<p>Shortened inline breakpoints</p>
+						<pre><code class="scss">
+@mixin breakpoint($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+}
+						</code></pre>
+						<p>@content lets you pass anything inside braces.</p>
+					</section>
+
+
+					<section>
+						<h2>Usage</h2>
+						<pre><code class="scss">
+.main-column {
+  width: 100%;
+
+  @include breakpoint(768px) {
+    width: 80%;
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Better Breakpoints</h2>
+						<p>Use fixed variables</p>
+						<pre><code class="scss">
+$tablet-breakpoint: 640px;
+$desktop-breakpoint: 960px;
+
+@mixin bp-large {
+  @media only screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Usage</h2>
+						<pre><code class="scss">
+.main-column {
+  width: 100%;
+
+  @include bp-small {
+    width: 80%;
+  }
+
+  @include bp-large {
+    width: 50%;
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Mixins are everywhere</h2>
+						<p>A quick search for 'Sass mixins' will yield many recipes that people have already written.</p>
+						<p>Some even ship Sass mixin libraries, like Bourbon or Sassmatic</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Them's the Basics</h2>
+						<p>Sass has many features and methods of being used.</p>
+						<p>Use only what you find useful at first.</p>
+						<p>Gradually start using more features as you get comfortable.</p>
+					</section>
+					<section>
+						<h2>Closing thoughts</h2>
+						<p>Use Sass throughout this class.</p>
+						<p>Use the parts that are most helpful.</p>
+						<p>Practice thinking in components.</p>
+					</section>
+					<section>
+						<h2>That's it</h2>
+						<p>Go kick some Sass.</p>
+					</section>
+				</section>
+					
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
