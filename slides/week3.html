@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="Lecture for Web Dev 3">
+		<meta name="author" content="Dakota Ling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 3</h1>
+					<h3>Components and Organization</h3>
+				</section>
+
+				<section>
+					<section>
+						<h2>Components</h2>
+						<ul>
+							<li>Break things down</li>
+							<li>Assemble from pieces</li>
+						</ul>
+						<p>Think Legos</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Methodologies</h2>
+						<p><a href="https://github.com/awesome-css-group/awesome-css">Awesome CSS</a></p>
+						<ul>
+							<li><a href="https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/">OOCSS</a> - Reusable Objects</li>
+							<li><a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a> - Block, Element, Modifier</li>
+							<li><a href="http://vanseodesign.com/css/smacss-introduction/">SMACSS</a> - Layout, Module, State</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Identify Chunks</h2>
+						<p>...or modules, or components, etc.</p>
+						<p>Let's break <a href="https://dribbble.com/shots/11133244-The-brand-new-Pitch-blog">this dribbble design</a> down.</p>
+					</section>
+					<section>
+						<h2>Everything is Rectangles</h2>
+						<ul>
+							<li>It's called the box model</li>
+							<li>What are wireframes?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Another!</h2>
+						<p>Let's break down <a href="https://dribbble.com/shots/11124642-Air-balloon-festival-website/">a more challenging design.</a></p>
+					</section>
+					<section>
+						<h2>Rows and Columns</h2>
+						<ul>
+							<li>Flex likes straight lines</li>
+							<li>Make more containers</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Common Chunks</h2>
+						<p>Writing for reusability.</p>
+					</section>
+					<section>
+						<ul>
+							<li>Identify what is known</li>
+							<li>And what is not</li>
+						</ul>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Media Pattern</h2>
+						<p>
+							Outlined by <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Nicole Sullivan</a>
+						</p>
+						<p>An image with text next to it.</p>
+					</section>
+					<section>
+						<h2>The HTML</h2>
+						<pre><code>
+<div class="media">
+	<img class="media-figure" src="my-image.png">
+	<div class="media-body">
+		<p>Content</p>
+	</div>
+</div>
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>The Sass</h2>
+						<pre><code>
+.media {
+	display: flex;
+	align-items: flex-start;
+
+	.media-body {
+		flex: 1;
+	}
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>More Breakdown</h2>
+						<p><a href="https://dribbble.com/shots/11125494-Architecture-Header-UI">Another design</a> that breaks the container.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Positioning</h2>
+						<p>
+							Relative, Absolute, and when to use them
+						</p>
+					</section>
+					<section>
+						<h2>From the Edge In</h2>
+						<p>If you are going to break the borders of your container... make another container.</p>
+					</section>
+					<section>
+						<h2>Relative</h2>
+						<ul>
+							<li>Required for Absolute to work correctly</li>
+							<li>DO NOT use 'top', 'right', etc. for layout</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Absolute</h2>
+						<ul>
+							<li>Use top, right, bottom, and left to position</li>
+							<li>Relative to the last non-static parent</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Absolute and Creating Components</h2>
+						<ul>
+							<li>Use it to layer stuff over other stuff</li>
+							<li>Use in containers with other relative content</li>
+							<li>...Or ones with known dimensions</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Familiar Elements</h2>
+						<p>Let's look at some components of <a href="https://dribbble.com/shots/11031726-MYFIT-homepage-design-proposal">another design.</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>That's it!</h2>
+						<p>We will explore more complex assembly next class.</p>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
