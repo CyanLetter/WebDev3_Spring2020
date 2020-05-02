@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="Lecture for Web Dev 3">
+		<meta name="author" content="Dakota Ling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 4</h1>
+					<h3>Big Images and Video</h3>
+				</section>
+
+				<section>
+					<h2>Why Images Matter</h2>
+					<p>Websites are getting bigger.</p>
+					<p>Images account for <a href="https://speedcurve.com/blog/web-performance-page-bloat/">majority of a page's size.</a></p>
+				</section>
+
+				<section>
+					<h2>Free Sources</h2>
+					<p><a href="https://unsplash.com/">Unsplash</a></p>
+					<p><a href="https://undraw.co/">Undraw</a></p>
+					<p><a href="https://webgradients.com/">Web Gradients</a></p>
+					<p><a href="https://fontawesome.com/">Font Awesome</a></p>
+					<p><a href="https://videos.pexels.com/">Pexels Video</a></p>
+				</section>
+
+				<section>
+					<h2>Big Images Look Good</h2>
+					<a href="https://www.hugeinc.com/">Huge</a><br>
+					<a href="https://www.brightlabs.com.au/">Brightlabs</a><br>
+				</section>
+
+				<section>
+					<p>Image optimization is the quickest route to improving page performance.</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>How to Check Image Size</h2>
+						<p>On your computer and in the browser.</p>
+					</section>
+					<section>
+						<h2>Finder / Explorer</h2>
+						<p>List view will have a column.</p>
+						<p>Column view also shows dimensions.</p>
+					</section>
+					<section>
+						<h2>Chrome Dev Tools</h2>
+						<p><img src="images/networkprofile.png"></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Spritesheets</h2>
+						<p>Fewer network requests is better.</p>
+					</section>
+
+					<section>
+						<h2>Icons</h2>
+						<p>SVG Sprites from <a href="https://fontawesome.com/how-to-use/svg-sprites">Fontawesome</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Image Formats</h2>
+						<p>The major ones at least</p>
+						<ul>
+							<li>JPG</li>
+							<li>PNG</li>
+							<li>SVG</li>
+							<li>GIF</li>
+						</ul>
+					</section>
+					<section>
+						<h2>JPG</h2>
+						<p>Good for:</p>
+						<ul>
+							<li>Photographs</li>
+							<li>High complexity images</li>
+						</ul>
+					</section>
+					<section>
+						<h2>PNG</h2>
+						<p>Good for:</p>
+						<ul>
+							<li>Illustrations</li>
+							<li>Hard edges</li>
+							<li>Transparency</li>
+						</ul>
+					</section>
+					<section>
+						<h2>SVG</h2>
+						<p>Good for:</p>
+						<ul>
+							<li>Vector art</li>
+							<li>Icons</li>
+							<li>Large, simple images</li>
+						</ul>
+						<p>We'll dig deep later on</p>
+					</section>
+					<section>
+						<h2>GIF</h2>
+						<p>Good for:</p>
+						<ul>
+							<li>Nothing</li>
+							<li>Email maybe</li>
+							<li>Ugh</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Compressing JPG</h2>
+						<p>Photoshop - Save for Web</p>
+						<p>You cannot beat the tools here.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Compressing PNG</h2>
+						<p>Isn't PNG lossless?</p>
+						<p>Lossy compression with <a href="https://pngmini.com/">Image Alpha</a>.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Dimensions</h2>
+						<p>Use images at the right dimensions.</p>
+						<p>Designers will often hand off ultra high res.</p>
+					</section>
+					<section>
+						<h2>Size images for their role</h2>
+						<ul>
+							<li>Background images don't have to be huge</li>
+							<li>Use thumbnails or lazy loading for high-res content</li>
+							<li>Use srcset for different screen sizes</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Srcset</h2>
+						<h6>(source set)</h6>
+						<p>Responsive images through multiple resolutions</p>
+					</section>
+
+					<section>
+						<h2>Basic Example</h2>
+						<p>List multiple image sized</p>
+						<pre><code>
+<img srcset="mobile.jpg 500w, 
+             tablet.jpg 800w, 
+             desktop.jpg 1200w" 
+     src="desktop.jpg">
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Width</h2>
+						<ul>
+							<li>Specifies the width of each file</li>
+							<li>Browser picks based on screen width</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Sizes</h2>
+						<ul>
+							<li>Tell the browser about your breakpoints</li>
+							<li>How big images will be at different window sizes</li>
+						</ul>
+						<pre><code>
+<img sizes="(max-width: 640px) 90vw, 
+            (max-width: 1024px) 500px, 
+            1000px">
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Additional Info</h2>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">MDN Walkthrough</a></p>
+						<ul>
+							<li>Display density</li>
+							<li>Picture element</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Lazy Loading</h2>
+						<p>Don't load images that are not in view</p>
+						<p><a href="https://caniuse.com/#feat=loading-lazy-attr">Decent support</a></p>
+					</section>
+					<section>
+						<p>The Attribute</p>
+						<p>lazy, eager, auto</p>
+						<pre style="white-space: normal;"><code>
+<img loading="lazy" ...>
+						</code></pre>
+						<p>Defaults to auto</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Video</h2>
+						<p>What platforms, and how?</p>
+					</section>
+					<section>
+						<h2>Use Vimeo if...</h2>
+						<ul>
+							<li>Your video is your content</li>
+							<li>You need the latest streaming technology</li>
+							<li>You can pay for pro features</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Use HTML5 if...</h2>
+						<ul>
+							<li>Your videos enhance your content</li>
+							<li>You need total control over your videos</li>
+							<li>You need to do atypical things with your video</li>
+							<li>You need to be able to update and change things quickly</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Some Real World Examples</h2>
+						<a href="https://weareroyale.com/">We Are Royale</a><br>
+						<a href="https://www.thisisdk.com/">Digital Kitchen</a><br>
+						<p>And some <a href="https://css-tricks.com/should-i-use-a-video-as-a-background/">best practices.</a></p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Video in the Background</h2>
+					<p>Autoplay only works in <a href="https://webkit.org/blog/6784/new-video-policies-for-ios/">specific situations</a></p>
+					<pre><code>
+<video src="video.mp4" loop autoplay muted playsinline></video>
+					</code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Compressing Video</h2>
+						<p>Convert to H.264 mp4</p>
+						<p>Use Handbrake: <a href="https://handbrake.fr/">handbrake.fr</a></p>
+					</section>
+				</section>
+
+				<section>
+					<h2>That's it</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
