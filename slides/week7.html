@@ -39,7 +39,7 @@
 				<section>
 					<section>
 						<h2>What is CSS Grid?</h2>
-						<p>Making sure that anyone can use your site, under any condition.</p>
+						<p>A layout system, like flexbox and floats.</p>
 					</section>
 				</section>
 
@@ -90,6 +90,7 @@
 						<h2>Grid Template</h2>
 						<p>Defining rows and columns</p>
 						<pre><code>
+display: grid;
 grid-template-columns: 100px auto 100px;
 grid-template-rows: 80px auto 80px; 
 						</code></pre>
@@ -154,7 +155,7 @@ grid-template-columns: 100px repeat(10, 1fr);
 						<p>minmax()</p>
 						<p>Flexible grid sizes with constraints</p>
 						<pre><code>
-grid-template-columns: minmax(80px 1fr) 3fr;
+grid-template-columns: minmax(80px, 1fr) 3fr;
 						</code></pre>
 					</section>
 				</section>
