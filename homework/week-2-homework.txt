@@ -1,0 +1,42 @@
+Make a pricing page for a fake software product. Some examples of the format I’m looking for:
+
+https://www.spotify.com/us/premium/
+https://www.dropbox.com/business/pricing
+https://www.invisionapp.com/plans
+https://store.unity.com/#plans-business
+
+Make a git repository for your project. Make a branch called ‘development’ and work off of that. When you finish the assignment, merge the development branch into master.
+
+The site itself should be a simple landing page to purchase three tiers of a software service, built using sass. At the minimum, your Sass file should contain examples of the following:
+
+- Partial Sass files. Divide things into at least a main, home, and variables file.
+- Nested style rules. No specific number here, just try to nest things based on component and section. 
+- At least three variables - a primary text color, a background color, and a secondary accent color for links, outlines, and buttons.
+- At least one inline media query, to make your page go from a three column layout to one column. This would be a great time to use a mixin.
+- At least one mixin. Using the breakpoint mixin counts, but I encourage you to experiment with using them for other common styles or rules.
+
+The page itself must be responsive and should include 3 main sections:
+
+Section 1 should contain:
+
+- A background image
+- Call-to-action text
+
+Section 2 should contain:
+
+- A form field and button to sign up for something (newsletter, free account)
+- Text encouraging the user to sign up
+
+Section 3 should contain three columns, each with a module that lists one level of pricing for your fake service. Each module should include:
+
+- A title
+- A price
+- A short description
+- A list of features
+- A Buy button
+
+Additionally, one of these columns should have some unique styling, to indicate that it is special for some reason - better value, enterprise focused, etc. Define a base style for the columns, then use @extend or @mixin to make variations on the style.
+
+You will be graded on your sass file as much as the site itself. Keep in mind that the main goal of this assignment is to get you comfortable using Sass on a regular basis, so focus your efforts on writing effective, reusable styles. I will look at your Sass files in future projects, but this is the best time to ask about best practices and figure out the parts that you like using. There are about a million bad habits you can develop while using sass, so let's try to address them early.
+
+Submit a link to the git repository for this assignment.

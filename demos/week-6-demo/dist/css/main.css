@@ -1,0 +1,200 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+==============================================
+*/
+/* 0. Imports ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 1. Variables ================================= */
+/* 2. Mixins ================================= */
+.media {
+  display: flex;
+  align-items: center;
+}
+.media .media-body {
+  flex: 1;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card .text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card .text :last-child {
+  margin-top: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p, ul, ol, a {
+  margin: 10px 0;
+  line-height: 1.2em;
+}
+
+ol {
+  margin-left: 20px;
+}
+ol li {
+  list-style: decimal;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.signup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  visibility: hidden;
+}
+.signup.active {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+}
+.signup form {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+.signup form input {
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1.5rem;
+  outline: none;
+}
+.signup form input:focus {
+  border-bottom: 2px solid blue;
+}
+
+.pass-section form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+/*# sourceMappingURL=main.css.map */

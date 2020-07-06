@@ -1,0 +1,266 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+==============================================
+*/
+/* 0. Imports ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 1. Variables ================================= */
+/* 2. Mixins ================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px 10px 1fr 10px 200px;
+    grid-template-columns: 200px 1fr 200px;
+    -ms-grid-rows: 80px 10px auto 10px auto 10px 80px;
+    grid-template-rows: 80px auto auto 80px;
+        grid-template-areas: "header  header  header" "title   title   title" "related content advertisement" "footer  footer  footer";
+    gap: 10px;
+  }
+}
+
+header {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: header;
+  grid-column-end: span header;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Abril Fatface", serif;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p, ul, ol, a {
+  margin: 10px 0;
+  line-height: 1.2em;
+}
+
+ol {
+  margin-left: 20px;
+}
+ol li {
+  list-style: decimal;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+.media .media-body {
+  flex: 1;
+}
+
+.card, .meal-card {
+  display: flex;
+  flex-direction: column;
+}
+.card .text, .meal-card .text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card .text :last-child, .meal-card .text :last-child {
+  margin-top: auto;
+}
+
+.article-title {
+  grid-column: 1/span title;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(300px, 1fr) 1fr 1fr;
+  grid-template-columns: minmax(300px, 1fr) 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.article-title > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.article-title > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.article-title > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.article-title > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.article-title > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.article-title > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+.article-title .title-image {
+  background-image: url("../img/eaters-collective-ddZYOtZUnBk-unsplash.jpg");
+  background-size: cover;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+.article-title h1 {
+  background: #ffff00;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  padding: 20px;
+}
+.article-title p {
+  padding: 10px;
+}
+
+.related {
+  -ms-grid-column: related;
+      grid-column-start: related;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+}
+.related li {
+  height: 200px;
+  background: #ffff00;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advertisement {
+  -ms-grid-column: advertisement;
+      grid-column-start: advertisement;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  background: #ccc;
+  font-size: 0.5rem;
+}
+
+.content {
+  -ms-grid-column: content;
+      grid-column-start: content;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.meal-card img {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

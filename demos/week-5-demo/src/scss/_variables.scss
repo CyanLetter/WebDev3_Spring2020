@@ -1,0 +1,33 @@
+/* 1. Variables ================================= */
+
+// margins and spacing
+$heading-spacing: 20px;
+
+$standard-spacing: 10px;
+$standard-indent: 20px;
+
+// breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+
+/* 2. Mixins ================================= */
+
+@mixin bp-small {
+	@media screen and (min-width: $breakpoint-mobile) {
+		@content;
+	}
+}
+
+@mixin bp-med {
+	@media screen and (min-width: $breakpoint-tablet) {
+		@content;
+	}
+}
+
+@mixin bp-large {
+	@media screen and (min-width: $breakpoint-desktop) {
+		@content;
+	}
+}

@@ -1,0 +1,58 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	margin: $heading-spacing 0;
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.2rem;
+}
+
+h4 {
+	font-size: 1.8rem;
+}
+
+h5 {
+	font-size: 1.4rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p, ul, ol, a {
+	margin: $standard-spacing 0;
+	line-height: 1.2em;
+}
+
+ol {
+	margin-left: $standard-indent;
+
+	li {
+		list-style: decimal;
+	}
+	
+}
+
+a {
+	text-decoration: none;
+
+	&:hover, &:active {
+		text-decoration: underline;
+	}
+}

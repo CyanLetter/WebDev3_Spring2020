@@ -1,0 +1,58 @@
+nav {
+  ul {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.signup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.5s;
+  transform: translateY(100%);
+  visibility: hidden;
+
+  &.active {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    font-size: 1.5rem;
+
+    input {
+      padding: 12px;
+      border: none;
+      border-bottom: 1px solid black;
+      font-size: 1.5rem;
+      outline: none;
+
+      &:focus {
+        border-bottom: 2px solid blue;
+      }
+    }
+  }
+}
+
+.pass-section {
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+}

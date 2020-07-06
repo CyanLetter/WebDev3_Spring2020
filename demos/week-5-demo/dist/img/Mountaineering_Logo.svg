@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550.56307 186">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #db9e16;
+      }
+
+      .cls-2 {
+        fill: #8db29c;
+      }
+
+      .cls-3 {
+        fill: #4b6b58;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <title>Mountaineering_Logo</title>
+  <g id="Fills">
+    <path id="Sun_Fill" class="cls-1" d="M416,242l-80.37225-86.17889C348,142,371.58329,131,394,131c40.056,0,71.75374,32.13785,80,70Z" transform="translate(-117.43693 -119)"/>
+    <polyline id="Mountain_BG_Fill" class="cls-2" points="356.537 183 547.563 183 388.782 71 305.975 129.409"/>
+    <polygon id="Mountain_FG_Fill" class="cls-3" points="173.063 3 3 182.686 343.126 182.686 173.063 3"/>
+  </g>
+  <g id="Outlines">
+    <path id="Sun_Stroke" class="cls-4" d="M336.48106,154.67491A80.50757,80.50757,0,0,1,473.26067,200.5438" transform="translate(-117.43693 -119)"/>
+    <polyline id="Mountain_BG_Stroke" class="cls-4" points="353.537 183 547.563 183 388.782 71 305.975 129.409"/>
+    <polygon id="Mountain_FG_Stroke" class="cls-4" points="173.063 3 3 182.686 343.126 182.686 173.063 3"/>
+  </g>
+</svg>

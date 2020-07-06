@@ -1,0 +1,28 @@
+.media {
+	display: flex;
+	align-items: flex-center;
+
+	.media-body {
+		flex: 1;
+	}
+}
+
+.card-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+
+		:last-child {
+			margin-top: auto;
+		}
+	}
+}

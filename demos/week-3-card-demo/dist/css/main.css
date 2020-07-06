@@ -1,0 +1,226 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+==============================================
+*/
+/* 0. Imports ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 1. Variables ================================= */
+/* 2. Mixins ================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p, ul, ol, a {
+  margin: 10px 0;
+  line-height: 1.2em;
+}
+
+ol {
+  margin-left: 20px;
+}
+ol li {
+  list-style: decimal;
+}
+
+a {
+  color: #ff00cc;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+.media, .comment {
+  display: flex;
+  align-items: flex-start;
+}
+.media .media-body, .comment .media-body {
+  flex: 1;
+}
+
+.card-container, .menu-container, .testemonial-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card, .testemonial-card, .menu-card {
+  display: flex;
+  flex-direction: column;
+}
+.card .text, .testemonial-card .text, .menu-card .text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card .text :last-child, .testemonial-card .text :last-child, .menu-card .text :last-child {
+  margin-top: auto;
+}
+
+section {
+  background: #ccc;
+  padding: 20px;
+}
+
+.menu-container, .testemonial-container {
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  max-width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: white;
+}
+.menu-card .image {
+  height: 200px;
+  overflow: hidden;
+}
+.menu-card .image img {
+  width: 100%;
+}
+.menu-card .text {
+  padding: 10px;
+}
+.menu-card .text a {
+  display: block;
+  text-align: center;
+  background: #008800;
+  border-radius: 3px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.testemonial-card {
+  background: white;
+  margin-top: 80px;
+  width: 300px;
+}
+.testemonial-card .image {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  -ms-grid-row-align: center;
+      align-self: center;
+  border: 5px solid white;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.testemonial-card .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testemonial-card .text {
+  padding: 10px;
+}
+.testemonial-card .text address {
+  color: #888;
+  align-self: flex-end;
+}
+.testemonial-card .replies {
+  margin: 5px;
+  padding: 5px;
+  background: #ddd;
+}
+
+.comment {
+  border-bottom: 1px solid #aaa;
+}
+.comment img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50px;
+}
+/*# sourceMappingURL=main.css.map */
